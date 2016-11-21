@@ -6,21 +6,21 @@ import DocumentTitle from 'react-document-title'
 import access from 'safe-access'
 import { config } from 'config'
 import SiteSidebar from '../SiteSidebar'
-import './style.css';
+import './style.css'
 
 class SitePage extends React.Component {
   render() {
-    const {route} = this.props
+    const { route } = this.props
     const post = route.page.data
 
     return (
       <div>
         <SiteSidebar {...this.props} />
-        <div className='content'>
-          <div className='main'>
-            <div className='main-inner'>
-              <div className='blog-page'>
-                <div className='text'>
+        <div className="content">
+          <div className="main">
+            <div className="main-inner">
+              <div className="blog-page">
+                <div className="text">
                   <h1>{post.title}</h1>
                   <div dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
@@ -29,7 +29,7 @@ class SitePage extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 

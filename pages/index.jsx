@@ -23,15 +23,15 @@ class SiteIndex extends React.Component {
         const category = access(page, 'data.category')
 
         pageLinks.push(
-          <div className='blog-post'>
+          <div className="blog-post">
             <time dateTime={moment(datePublished).format('MMMM D, YYYY')}>
               {moment(datePublished).format('MMMM YYYY')}
             </time>
-            <span style={{ padding: '5px' }}></span>
-            <span className='blog-category'>{category}</span>
-            <h2><Link style={{ borderBottom: 'none', }} to={prefixLink(page.path)} > {title} </Link></h2>
+            <span style={{ padding: '5px' }} />
+            <span className="blog-category">{category}</span>
+            <h2><Link style={{ borderBottom: 'none' }} to={prefixLink(page.path)} > {title} </Link></h2>
             <p dangerouslySetInnerHTML={{ __html: description }} />
-            <Link className='readmore' to={prefixLink(page.path)}> Read
+            <Link className="readmore" to={prefixLink(page.path)}> Read
                       </Link>
           </div>
         )
@@ -42,9 +42,9 @@ class SiteIndex extends React.Component {
       <DocumentTitle title={config.siteTitle}>
         <div>
           <SiteSidebar {...this.props} />
-          <div className='content'>
-            <div className='main'>
-              <div className='main-inner'>
+          <div className="content">
+            <div className="main">
+              <div className="main-inner">
                 {pageLinks}
               </div>
             </div>

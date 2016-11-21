@@ -9,13 +9,13 @@ import '../static/css/typography.css'
 
 class Template extends React.Component {
   render() {
-    const {location, children} = this.props
+    const { location, children } = this.props
 
     return (
-      <div className='wrapper'>
+      <div className="wrapper">
         {children}
       </div>
-    );
+    )
   }
 }
 

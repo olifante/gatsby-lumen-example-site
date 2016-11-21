@@ -7,9 +7,9 @@ import './style.css'
 
 class ReadNext extends React.Component {
   render() {
-    const {post} = this.props
-    const {pages} = this.props.route
-    const {readNext} = post
+    const { post } = this.props
+    const { pages } = this.props.route
+    const { readNext } = post
 
     let nextPost
     if (readNext) {
@@ -27,11 +27,11 @@ class ReadNext extends React.Component {
         <div>
           <h6 style={{ fontSize: '16px', margin: '20px 0 0' }}>READ THIS NEXT:</h6>
           <h3 style={{ margin: '5px 0 0' }}><Link to={nextPost.path} query={{ readNext: true }} > {nextPost.data.title} </Link></h3>
-          <p className='description'>
+          <p className="description">
             {description}
           </p>
         </div>
-      );
+      )
     }
   }
 }

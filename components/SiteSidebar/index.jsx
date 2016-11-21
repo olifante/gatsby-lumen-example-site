@@ -9,13 +9,13 @@ import profilePic from '../../pages/photo.jpg'
 
 class SiteSidebar extends React.Component {
   render() {
-    const {location, children} = this.props
+    const { location, children } = this.props
     const isHome = location.pathname === prefixLink('/')
 
-    let header = (
+    const header = (
       <header>
         <Link style={{ textDecoration: 'none', borderBottom: 'none', outline: 'none' }} to={prefixLink('/')}>
-          <img src={prefixLink(profilePic)} width='75' height='75' />
+          <img src={prefixLink(profilePic)} width="75" height="75" alt="header" />
         </Link>
         {isHome ? (
           <h1><Link style={{ textDecoration: 'none', borderBottom: 'none', color: 'inherit' }} to={prefixLink('/')}> {config.siteAuthor} </Link></h1>
@@ -28,25 +28,25 @@ class SiteSidebar extends React.Component {
     )
 
     return (
-      <div className='sidebar'>
-        <div className='sidebar-inner'>
-          <div className='blog-details'>
+      <div className="sidebar">
+        <div className="sidebar-inner">
+          <div className="blog-details">
             <header>
               {header}
             </header>
           </div>
-          <div className='blog-options'>
+          <div className="blog-options">
             <SiteNav {...this.props} />
             <footer>
               <SiteLinks {...this.props} />
-              <p className='copyright'>
+              <p className="copyright">
                 &copy; All rights reserved.
                     </p>
             </footer>
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 

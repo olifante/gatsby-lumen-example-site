@@ -1,6 +1,6 @@
-var rucksack = require('rucksack-css')
-var lost = require("lost")
-var cssnext = require("postcss-cssnext")
+const rucksack = require('rucksack-css')
+const lost = require('lost')
+const cssnext = require('postcss-cssnext')
 
 exports.modifyWebpackConfig = function (config, env) {
     config.merge({
@@ -8,9 +8,9 @@ exports.modifyWebpackConfig = function (config, env) {
             lost(),
             rucksack(),
             cssnext({
-                browsers: ['>1%', 'last 2 versions']
-            })
-        ]
+                browsers: ['>1%', 'last 2 versions'],
+            }),
+        ],
     })
 
     config.loader('svg', {
@@ -19,4 +19,4 @@ exports.modifyWebpackConfig = function (config, env) {
     })
 
     return config
-};
+}
