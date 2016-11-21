@@ -1,12 +1,15 @@
 .wrapper {
 	lost-center: 1070px;
 }
+
 .content {
 	lost-column: 2/3;
 }
+
 .main-inner {
 	padding: 40px 35px;
 }
+
 @media screen and (max-width:1100px) {
 	.content {
 		lost-column: 2/4;
@@ -15,6 +18,7 @@
 		padding: 35px 20px;
 	}
 }
+
 @media screen and (max-width:900px) {
 	.content {
 		lost-column: 7/12;
@@ -23,6 +27,7 @@
 		padding: 30px 20px;
 	}
 }
+
 @media screen and (max-width:500px) {
 	.content {
 		lost-column: 4/4;
