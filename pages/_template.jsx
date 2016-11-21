@@ -1,7 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import { config } from 'config'
 
 import '../static/css/reset.css'
 import '../static/css/base.css'
@@ -9,7 +6,7 @@ import '../static/css/typography.css'
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { children } = this.props
 
     return (
       <div className="wrapper">

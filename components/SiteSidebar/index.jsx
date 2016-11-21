@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouteHandler, Link } from 'react-router'
+import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import SiteNav from '../SiteNav'
@@ -9,7 +9,7 @@ import profilePic from '../../pages/photo.jpg'
 
 class SiteSidebar extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { location } = this.props
     const isHome = location.pathname === prefixLink('/')
 
     const header = (
